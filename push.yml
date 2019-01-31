@@ -1,0 +1,14 @@
+# Playbook to push config file 
+
+- hosts: CSR-Routers
+  connection: network-cli
+  gather_facts: false
+
+  tasks:
+  - name: Push config file 
+    ios_config:
+      src: "./configs/push.txt"
+
+  - name: Save config when modified
+    ios_config:
+      save_when: modified

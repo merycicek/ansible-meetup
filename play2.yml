@@ -1,0 +1,37 @@
+---
+# Playbook to Backup Cisco Config 
+
+- hosts: localhost
+  gather_facts: false
+  
+  tasks:
+   - name: Get ansible date/time facts
+     setup:
+       filter: "ansible_date_time"
+       gather_subset: "!all"
+
+   - name: Store DTG as fact
+     set_fact:
+       DTG: "{{ ansible_date_time.date }}"
+
+   - name: Create Directory {{hostvars.localhost.DTG}} 
+     file: 
+      path: ./backups/{{hostvars.localhost.DTG}}
+      state: directory
+
+- hosts: CSR-Routers
+  connection: network_cli
+  gather_facts: false
+
+  tasks:
+   - name: Show Run on Device
+     ios_command:
+       commands:
+         - show run
+     register: config
+
+   - name: Save output to /backups/{{hostvars.localhost.DTG}}
+     copy:
+       content: "{{config.stdout[0]}}"
+       dest: "./backups/{{hostvars.localhost.DTG}}/{{inventory_hostname}}-{{hostvars.localhost.DTG}}-config.txt"
+
