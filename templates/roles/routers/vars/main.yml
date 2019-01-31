@@ -3,11 +3,17 @@ routers:
   - hostname: CSR-1
     loopback1_ip: 1.1.1.1 255.255.255.255
     gig2_ip: 10.0.0.1 255.255.255.0 
+    username: ansible1
+    password: cisco
 
   - hostname: CSR-2
     loopback1_ip: 2.2.2.2 255.255.255.255
     gig2_ip: 10.0.0.2 255.255.255.0 
+    username: ansible2 
+    password: cisco
 
   - hostname: CSR-3
     loopback1_ip: 3.3.3.3 255.255.255.255
     gig2_ip: 10.0.0.3 255.255.255.0 
+    username: ansible3 
+    password: cisco

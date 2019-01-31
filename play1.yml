@@ -15,5 +15,5 @@
    - name: Save output to /backups
      copy:
        content: "{{config.stdout[0]}}"
-       dest: "./backups/{{inventory_hostname}}-config.txt"
+       dest: "./backups/{{inventory_hostname}}-backup.txt"
 

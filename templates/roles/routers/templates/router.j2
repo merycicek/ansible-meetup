@@ -5,9 +5,12 @@ service timestamps debug datetime msec localtime show-timezone
 service timestamps log datetime msec localtime show-timezone
 service password-encryption
 !
+username {{item.username}} password {{item.password}}
+!
 hostname {{item.hostname}}
 !
 interface loopback 1
+ description Configured by Ansible
  ip address {{item.loopback1_ip}}
 !
 interface GigabitEthernet2
