@@ -1,14 +1,17 @@
 # Ansible Meetup London Talk 
-How I save myself 30 minutes a day as a network engineer 
+## How I save myself 30 minutes a day as a network engineer 
 
-## Playbooks to backup Cisco routers and switches and push configurations
+## Playbooks to backup Cisco routers and switches and push configurations and config templates
 Does not work for NXOS but could easily be adjusted to hit NXOS or ASA by changing modules in use
 
 ## VIDEO 
 Watch the video to see me walk you through these playbooks. 
 https://youtu.be/MSp0eTDPDQE
 
+## My Ansible Network Automation Course 
+https://learn-network-automation.teachable.com/p/ansible-for-network-engineers
 
+## Get started 
 Clone the repo to your machine 
 
 Change the hosts to addresses of your devices 
