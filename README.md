@@ -4,6 +4,11 @@ How I save myself 30 minutes a day as a network engineer
 ## Playbooks to backup Cisco routers and switches and push configurations
 Does not work for NXOS but could easily be adjusted to hit NXOS or ASA by changing modules in use
 
+## VIDEO 
+Watch the video to see me walk you through these playbooks. 
+https://youtu.be/MSp0eTDPDQE
+
+
 Clone the repo to your machine 
 
 Change the hosts to addresses of your devices 
